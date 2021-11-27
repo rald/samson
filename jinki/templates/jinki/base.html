@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jinki - {% block title %}Home{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'materialize/css/materialize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Jinki</a>
+        <ul id="nav-mobile" class="right">
+          <li><a href="/fsuu">Home</a></li>
+          <li><a href="/fsuu/Fpage">Function View</a></li>
+          <li><a href="/fsuu/Cpage">Class View</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <script src="{% static 'materialize/js/materialize.js' %}"></script>
+  </body>
+</html>

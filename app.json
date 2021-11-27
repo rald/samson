@@ -1,0 +1,22 @@
+{
+  "name": "jinki-samson",
+  "description": "A barebones Python app, which can easily be deployed to Heroku.",
+  "image": "heroku/python",
+  "repository": "https://github.com/rald/fsuu",
+  "keywords": ["python", "django" ],
+  "addons": [],
+  "env": {
+    "SECRET_KEY": {
+      "description": "it's alive",
+      "generator": "secret"
+    }
+  },
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "python manage.py collectstatic --noinput",
+        "test": "python manage.py test"
+      }
+    }
+  }
+}
